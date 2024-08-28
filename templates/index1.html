@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyRFC Call</title>
+</head>
+<body>
+    <h1>PyRFC Call</h1>
+    <form action="/" method="post">
+        <label for="SIGN">SIGN: </label>
+        <select id="SIGN" name="SIGN">
+            <option value="I">Include</option>
+            <option value="E">Exclude</option>
+            <option value="N">Neither</option>
+        </select><br><br>
+        
+        <label for="OPTION">OPTION: </label>
+        <select id="OPTION" name="OPTION">
+            <option value="GT">Greater Than</option>
+            <option value="LT">Less Than</option>
+            <option value="EQ">Equal To</option>
+        </select><br><br>
+        
+        <label for="LOW">Low: </label>
+        <input type="date" id="LOW" name="LOW"><br><br>
+
+        <label for="HIGH">HIGH: </label>
+        <input type="date" id="HIGH" name="HIGH"><br><br>
+        
+        <label for="SALE">Sale: </label>
+        <input type="text" id="SALE" name="SALE"><br><br>
+
+        <label for="Months">Months:</label>
+        <input type="range" id="Months" name="Months" min="1" max="12" step="1" value="1"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if df1 is not none %}
+    <h2>Schedule:</h2>
+    {{ df1.to_html() | safe }}
+    {% endif %}
+    
+    {% if df2 is not none %}
+    <h2>Sale:</h2>
+    {{ df2.to_html() | safe }}
+    {% endif %}
+</body>
+</html>

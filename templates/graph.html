@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Page</title>
+    
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Graph Page</h1>
+    <label for="Months">Months:</label>
+    <input type="range" id="Months" name="Months" min="1" max="12" step="1" value="1"><br><br>
+    
+    <input type="submit" value="Submit">
+
+    <!-- Display the graph div -->
+    <div id="graph"></div>
+    
+    <!-- JavaScript to generate the graph -->
+    <script>
+        // Extract data from the Flask variable `df` and `months`
+        var data = {
+            x: [],  // Dates from df
+            y: [],  // VTWEG values from df
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'VTWEG'
+        };
+
+        // Create the Plotly graph
+        var layout = {
+            title: 'VTWEG values over time',
+            xaxis: { title: 'Date' },
+            yaxis: { title: 'VTWEG' },
+            autosize: true
+        };
+
+        var config = { responsive: true };
+
+        // Plot the graph
+        Plotly.newPlot('graph', [data], layout, config);
+    </script>
+</body>
+</html>

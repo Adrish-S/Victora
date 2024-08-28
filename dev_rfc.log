@@ -1,0 +1,20 @@
+
+**** Log file opened at 2023-08-28 14:50:41.603151 UTC+05:30 (India Standard Time), Encoding UTF-8
+NW RFC Library: SDK variant, Release 750 Patch Level 12
+Compilation date          : Jul  7 2023 22:54:54
+CPIC library              : 753.2023.07.06 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1216
+Current working directory : C:\Users\Adrish\Downloads\rfc_vic
+Program                   : python
+Process ID                : 19648
+User                      : Adrish
+Hardware                  : PC with Windows NT 16x AMD64 Level 6 (Mod 154 Step 3)
+Operating_system          : Windows NT 10.0
+Hostname                  : MSI-ADRISH
+IP address                : 10.11.2.137
+IPv6 address              : fe80::cd03:58c9:7d5c:ed5b
+Global trace level        : 0
+
+2023-08-28 14:50:41.596130 [19772] >> Info entry
+	Did not find config file C:\Users\Adrish\Downloads\rfc_vic\sapnwrfc.ini.

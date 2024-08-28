@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+    <div class="data-input-container">
+        <form id="data-form" action="/process_data" method="post">
+            <label for="low_date">Low:</label>
+            <input type="date" name="low_date" required>
+            <label for="high_date">High:</label>
+            <input type="date" name="high_date" required>
+            <br>
+            <label for="SIGN">Sign:</label>
+            <select id="SIGN" name="SIGN">
+                <option value="I">Include</option>
+                <option value="E">Exclude</option>
+            </select>
+            <br><br>
+            <label for="options">Options:</label>
+            <select id="options" name="options">
+                <option value="EQ">Equal (EQ)</option>
+                <option value="NE">Not Equal (NE)</option>
+                <option value="GE">Greater or Equal (GE)</option>
+                <option value="GT">Greater Than (GT)</option>
+                <option value="LE">Less or Equal (LE)</option>
+                <option value="LT">Less Than (LT)</option>
+                <option value="BT">Between (BT)</option>
+            </select>
+            <br><br><br>
+            <label for="KUNNR">KUNNR:</label>
+            <input type="text" name="kunnr" placeholder="Kunnr" required>
+            <br><br>
+            <button type="submit">Process Data</button>
+        </form>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div id="chart-container" data-chart-data="" data-chart-layout="">
+        <!-- Graph will be displayed here using JavaScript -->
+    </div>
+    
+</body>
+</html>
